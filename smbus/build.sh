@@ -7,6 +7,7 @@ apt-get install qemu-user-static multistrap
 export TARGET_ROOTFS_DIR=ev3-rootfs
 multistrap -f multistrap.conf -d ${TARGET_ROOTFS_DIR}
 cp /usr/bin/qemu-arm-static ${TARGET_ROOTFS_DIR}/usr/bin
+cp /etc/resolv.conf ev3-rootfs/etc/
 mkdir -p ${TARGET_ROOTFS_DIR}/dev
 mount --bind /dev ${TARGET_ROOTFS_DIR}/dev
 chroot ${TARGET_ROOTFS_DIR} var/lib/dpkg/info/dash.preinst install
