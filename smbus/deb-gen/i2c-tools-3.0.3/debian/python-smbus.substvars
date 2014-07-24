@@ -1,0 +1,5 @@
+python:Versions=2.7
+python:Provides=python2.7-smbus
+python:Depends=python2.7, python (>= 2.7), python (<< 2.8)
+shlibs:Depends=libc6 (>= 2.3.6-6~), libc6 (>= 2.4)
+misc:Depends=
