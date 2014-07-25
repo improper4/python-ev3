@@ -15,7 +15,7 @@ chroot ${TARGET_ROOTFS_DIR} dpkg --configure -a
 cp -r py-smbus-python3 ${TARGET_ROOTFS_DIR}/home/py-smbus-python3
 chroot ${TARGET_ROOTFS_DIR} /home/py-smbus-python3/build-smbus.sh
 mkdir -p py-smbus-python3/build
-cp -r ${TARGET_ROOTFS_DIR}/home/py-smbus-python3/build/lib.linux-armv* py-smbus-python3/build
+cp -r ${TARGET_ROOTFS_DIR}/home/py-smbus-python3/*.deb py-smbus-python3/build
 umount ${TARGET_ROOTFS_DIR}/dev
 ls ${TARGET_ROOTFS_DIR}/dev
 echo "''''''''''''''''''''''''''"
