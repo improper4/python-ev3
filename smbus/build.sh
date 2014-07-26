@@ -12,6 +12,7 @@ mkdir -p ${TARGET_ROOTFS_DIR}/dev
 mount --bind /dev ${TARGET_ROOTFS_DIR}/dev
 chroot ${TARGET_ROOTFS_DIR} var/lib/dpkg/info/dash.preinst install
 chroot ${TARGET_ROOTFS_DIR} dpkg --configure -a
+rm -rf ${TARGET_ROOTFS_DIR}/home/py-smbus-python3
 cp -r py-smbus-python3 ${TARGET_ROOTFS_DIR}/home/py-smbus-python3
 chroot ${TARGET_ROOTFS_DIR} /home/py-smbus-python3/build-smbus.sh
 mkdir -p py-smbus-python3/build
